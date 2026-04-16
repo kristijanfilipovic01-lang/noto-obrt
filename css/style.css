@@ -1,0 +1,311 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    line-height: 1.6;
+    color: #334155;
+    background: #f8fafc;
+    padding-top: 220px;
+}
+
+header {
+    background: #0f172a;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,.15);
+    transition: all 0.3s ease;
+}
+
+header.shrunk { 
+    padding-top: 0;
+    margin-top: -160px;
+}
+
+nav { 
+    padding: 15px 20px; 
+    transition: all 0.3s ease; 
+}
+header.shrunk nav { 
+    padding: 10px 20px; 
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #4ade80;
+    background: rgba(74,222,128,.1);
+}
+
+.firma-logo {
+    margin: 0 0 10px 0;
+}
+
+.firma-logo img {
+    max-height: 50px;
+    width: auto;
+}
+
+.firma-info {
+    background: rgba(15,23,42,.95);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+header.shrunk .firma-info { 
+    display: none;
+}
+
+.firma-naziv {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.firma-adresa { 
+    color: #cbd5e1; 
+    font-size: 0.85rem; 
+    margin-bottom: 15px; 
+}
+
+.firma-podaci {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.firma-podaci span {
+    color: #f8fafc;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: rgba(255,255,255,.08);
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,.15);
+    transition: all 0.4s ease;
+}
+
+#hero {
+    background: linear-gradient(rgba(15,23,42,.8), rgba(15,23,42,.9)), 
+                url("../slike/kamion.jpg") center/cover;
+    color: white;
+    text-align: center;
+    padding: 160px 20px 120px;
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 20px rgba(0,0,0,.5);
+}
+
+#hero p {
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    opacity: 0.95;
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #4ade80, #22c55e);
+    color: #0f172a;
+    font-weight: 800;
+    font-size: 1.1rem;
+    padding: 16px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 20px 40px rgba(74,222,128,.4);
+    transition: all 0.4s ease;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 60px rgba(74,222,128,.6);
+}
+
+section {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0f172a;
+    font-weight: 900;
+    margin-bottom: 60px;
+}
+
+.usluge-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.usluga {
+    background: white;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px rgba(0,0,0,.1);
+    border: 1px solid #e2e8f0;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.usluga:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 35px 60px rgba(0,0,0,.15);
+}
+
+.usluga::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #4ade80, #22c55e);
+}
+
+.usluga h3 {
+    color: #0f172a;
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+#podrucje .podrucje-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    background: white;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px rgba(0,0,0,.1);
+}
+
+.podrucje-mapa h3 {
+    color: #0f172a;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+
+.podrucje-lista ul {
+    list-style: none;
+    padding: 0;
+}
+
+.podrucje-lista li {
+    padding: 12px 0;
+    color: #475569;
+    font-size: 1.1rem;
+}
+
+.mapa-embed {
+    background: white;
+    border-radius: 24px;
+    padding: 20px;
+    box-shadow: 0 25px 50px rgba(0,0,0,.1);
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.mapa-embed iframe {
+    width: 100%;
+    height: 400px;
+    border-radius: 16px;
+}
+
+#cta {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: white;
+    text-align: center;
+    border-radius: 24px;
+    padding: 80px 40px;
+    margin: 80px auto;
+    max-width: 900px;
+    box-shadow: 0 35px 70px rgba(0,0,0,.3);
+}
+
+#cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#cta p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    body { padding-top: 180px; }
+    nav ul { 
+        flex-wrap: wrap; 
+        gap: 10px; 
+        justify-content: center;
+    }
+    .firma-naziv { font-size: 1.6rem; }
+    #hero { 
+        padding: 130px 20px 80px; 
+    }
+    #hero h1 { font-size: 2.5rem; }
+    section { padding: 60px 20px; }
+    .usluge-wrapper { 
+        grid-template-columns: 1fr; 
+    }
+    #podrucje .podrucje-wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 30px 20px;
+    }
+    #cta { 
+        padding: 60px 30px; 
+        margin: 40px 20px; 
+    }
+    #cta h2 { font-size: 2rem; }
+    .mapa-embed iframe { height: 300px; }
+}
+
+@media (max-width: 480px) {
+    #hero h1 { font-size: 2rem; }
+    section h2 { font-size: 2rem; }
+    .usluga { padding: 30px 25px; }
+    .firma-podaci { 
+        flex-direction: column; 
+        gap: 8px; 
+    }
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naše usluge - NOTO Obrt za prijevoz i distribuciju</title>
+    <link rel="stylesheet" href="css/usluge.css">
+</head>
+<body>
+
+<!-- Hero sekcija -->
+<section id="usluge-hero">
+    <h1>Naše usluge</h1>
+    <p>
+        Obrt pruža pouzdane i kvalitetne usluge prijevoza materijala
+        te distribucije naftnih derivata, uz poštivanje svih sigurnosnih
+        i zakonskih propisa.
+    </p>
+</section>
+
+<!-- SLIDER 1: Kamioni -->
+<section id="slider">
+    <h2>Naša vozila i oprema</h2>
+
+    <div class="slider-container">
+        <button class="slider-btn prev kamion-prev">‹</button>
+
+        <div class="slider-track">
+            <div class="slider slider-kamion">
+                <img src="slike/slika1kamion.jpg" alt="Kamion 1">
+                <img src="slike/slika2kamion.jpg" alt="Kamion 2">
+                <img src="slike/slika3kamion.jpg" alt="Kamion 3">
+                <img src="slike/slika4kamion.jpg" alt="Kamion 4">
+                <img src="slike/slika5kamion.jpg" alt="Kamion 5">
+            </div>
+        </div>
+
+        <button class="slider-btn next kamion-next">›</button>
+    </div>
+
+    <p class="slider-text">
+        Naš vozni park uključuje moderni kamion s dizalicom,
+        prilagođen prijevozu rasutog i pakiranog tereta te
+        distribuciji naftnih derivata.
+    </p>
+</section>
+
+<!-- SLIDER 2: Distribucija -->
+<section id="slider-distribucija">
+    <h2>Distribucija naftnih derivata</h2>
+
+    <div class="slider-container">
+        <button class="slider-btn prev distrib-prev">‹</button>
+
+        <div class="slider-track">
+            <div class="slider slider-distribucija">
+                <img src="slike/boca1.jpg" alt="Boca 1">
+                <img src="slike/boca2.jpg" alt="Boca 2">
+                <img src="slike/boca3.jpg" alt="Boca 3">
+                <img src="slike/boca4.jpg" alt="Boca 4">
+                <img src="slike/boca5.jpg" alt="Boca 5">
+            </div>
+        </div>
+
+        <button class="slider-btn next distrib-next">›</button>
+    </div>
+
+    <p class="slider-text">
+        U okviru distribucije naftnih derivata isporučujemo gorivo
+        i druge naftne proizvode poslovnicama, servisima i
+        privatnim korisnicima, uz strogo pridržavanje sigurnosnih
+        pravila i propisa. [web:2][web:3]
+    </p>
+
+    <ul>
+        <li>Dostava benzina, dizelskog goriva i drugih naftnih proizvoda</li>
+        <li>Isporuka naftnih derivata do skladišta, radilišta i trgovina</li>
+        <li>Dogovorena redovita i povremena dostava prema potrebama klijenata</li>
+    </ul>
+</section>
+
+<!-- SLIDER 3: Oprema -->
+<section id="slider-oprema">
+    <h2>Rad s dizalicom i oprema</h2>
+
+    <div class="slider-container">
+        <button class="slider-btn prev oprema-prev">‹</button>
+
+        <div class="slider-track">
+            <div class="slider slider-oprema">
+                <img src="slike/oprema1.jpg" alt="Oprema 1">
+                <img src="slike/oprema2.jpg" alt="Oprema 2">
+                <img src="slike/oprema3.jpg" alt="Oprema 3">
+            </div>
+        </div>
+
+        <button class="slider-btn next oprema-next">›</button>
+    </div>
+
+    <p class="slider-text">
+        Naše vozilo s ugrađenom dizalicom omogućuje rukovanje
+        i premještanje teškog pakiranog tereta direktno na
+        radnom mjestu, bez dodatne opreme i dodatnih prevoza.
+    </p>
+
+    <ul>
+        <li>Otpakiravanje i premještanje tereta s kamiona na palete</li>
+        <li>Rukovanje rasutim i pakiranim materijalom na građevinskim
+            i industrijskim lokacijama</li>
+        <li>Brza i pouzdana usluga prilagođena vašem vremenskom roku</li>
+    </ul>
+</section>
+
+<!-- Ostale sekcije -->
+<section class="usluga-detalj1">
+    <h2>Prijevoz materijala</h2>
+    <p>
+        Pružamo uslugu prijevoza različitih vrsta materijala,
+        uključujući građevinski i industrijski materijal.
+    </p>
+
+    <ul>
+        <li>Prijevoz građevinskog materijala (npr. pijeska, šljunka
+            i betonskih mješavina)</li>
+        <li>Prijevoz paletirane i druge pakirane robe</li>
+        <li>Prijevoz rasutog tereta u većim količinama</li>
+        <li>Fleksibilni i dogovoreni termini isporuke</li>
+    </ul>
+</section>
+
+<section id="dodatne-usluge">
+    <h2>Dodatne usluge</h2>
+
+    <ul>
+        <li>Organizacija hitnih isporuka u kratkom roku</li>
+        <li>Individualni dogovor s klijentima o načinu i vremenu isporuke</li>
+        <li>Prilagodljiv i fleksibilan radni raspored</li>
+    </ul>
+</section>
+
+<section id="cta">
+    <h2>Zatražite ponudu</h2>
+    <p>Kontaktirajte nas za prilagođenu ponudu.</p>
+    <a href="kontakt.html" class="btn">Kontakt</a>
+</section>
+
+<script>
+function createSlider(sliderClass, prevClass, nextClass) {
+    const slider = document.querySelector(sliderClass);
+    if (!slider) return;
+
+    const images = slider.querySelectorAll("img");
+    if (images.length === 0) return;
+
+    const prevBtn = document.querySelector(prevClass);
+    const nextBtn = document.querySelector(nextClass);
+    if (!prevBtn || !nextBtn) return;
+
+    let index = 0;
+
+    // Funkcija koja vraća širinu jednog slajda
+    function getSlideWidth() {
+        const rect = images[0].getBoundingClientRect();
+        return rect.width;
+    }
+
+    // Inicijalno pozicioniranje
+    function update() {
+        const width = getSlideWidth();
+        slider.style.transform = `translateX(${-index * width}px)`;
+    }
+
+    // Prvi put nakon što se DOM i slike učitaju
+    window.addEventListener("load", update);
+
+    // Re‑aktualiziraj širinu i poziciju na resizeu
+    window.addEventListener("resize", update);
+
+    // NEXT
+    nextBtn.addEventListener("click", () => {
+        index = (index + 1) % images.length;
+        update();
+    });
+
+    // PREV
+    prevBtn.addEventListener("click", () => {
+        index = (index - 1 + images.length) % images.length;
+        update();
+    });
+}
+
+// Inicijalizacija slajdera
+createSlider(".slider-kamion",   ".kamion-prev",  ".kamion-next");
+createSlider(".slider-distribucija", ".distrib-prev", ".distrib-next");
+createSlider(".slider-oprema",   ".oprema-prev",  ".oprema-next");
+</script>
+
+</body>
+</html>

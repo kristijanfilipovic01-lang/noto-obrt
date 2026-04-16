@@ -1,0 +1,332 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    line-height: 1.6;
+    color: #334155;
+    background: #f8fafc;
+    padding-top: 200px; /* dovoljno za header + firma-info */
+}
+
+/* HEADER */
+header {
+    background: #0f172a;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,.15);
+    transition: all 0.4s ease;
+}
+
+/* NAV */
+nav {
+    padding: 12px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #4ade80;
+    background: rgba(74,222,128,.1);
+}
+
+/* FIRMA INFO (ANIMACIJA) */
+.firma-info {
+    background: rgba(15,23,42,.95);
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,.08);
+
+    max-height: 200px;
+    opacity: 1;
+    overflow: hidden;
+
+    transition: all 0.5s ease;
+}
+
+/* KAD SE SKRATI HEADER */
+header.shrunk .firma-info {
+    max-height: 0;
+    opacity: 0;
+    padding: 0 20px;
+}
+
+/* TEXT */
+.firma-naziv {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.firma-adresa {
+    color: #cbd5e1;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+.firma-podaci {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.firma-podaci span {
+    color: #f8fafc;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: rgba(255,255,255,.08);
+    padding: 6px 14px;
+    border-radius: 20px;
+}
+
+/* HERO */
+#hero {
+    background: linear-gradient(rgba(15,23,42,.8), rgba(15,23,42,.9)),
+                url("../slike/kamion.jpg") center/cover;
+    color: white;
+    text-align: center;
+    padding: 120px 20px 80px;
+}
+
+/* O STATAK OSTAVLJEN ISTI */
+
+#hero h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 20px rgba(0,0,0,.5);
+}
+
+#hero p {
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.95;
+}
+
+#o-nama-sadrzaj {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.o-nama-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.firma-kartica,
+.vlasnik-kartica {
+    background: white;
+    padding: 50px;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px rgba(0,0,0,.1);
+    border: 1px solid #e2e8f0;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.firma-kartica:hover,
+.vlasnik-kartica:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 35px 60px rgba(0,0,0,.15);
+}
+
+.firma-kartica::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #4ade80, #22c55e);
+}
+
+.vlasnik-kartica::before {
+    background: linear-gradient(90deg, #22c55e, #4ade80);
+}
+
+.firma-podaci-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.podatak.naziv h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #0f172a;
+    margin-bottom: 15px;
+}
+
+.podatak.naziv p {
+    font-size: 1.2rem;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.podatak { 
+    font-size: 1.1rem; 
+    line-height: 1.7; 
+}
+
+.podatak strong {
+    color: #0f172a;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.vlasnik-kartica { display: flex; gap: 40px; }
+
+.vlasnik-slika {
+    width: 220px;
+    flex-shrink: 0;
+}
+
+.vlasnik-slika img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #4ade80;
+    box-shadow: 0 20px 40px rgba(74,222,128,.4);
+    transition: all 0.4s ease;
+}
+
+.vlasnik-slika:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 30px 60px rgba(74,222,128,.5);
+}
+
+.vlasnik-slika .placeholder {
+    display: none;
+    background: linear-gradient(135deg, #4ade80, #22c55e);
+    color: white;
+    padding: 20px;
+    border-radius: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.vlasnik-slika img:not([src]) ~ .placeholder { display: block; }
+
+.vlasnik-opis h3 {
+    color: #0f172a;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+
+.vlasnik-opis p {
+    color: #475569;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.djelatnosti h4 {
+    color: #0f172a;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.djelatnosti ul { list-style: none; padding: 0; }
+
+.djelatnosti li {
+    padding: 15px 0 15px 35px;
+    position: relative;
+    font-size: 1.1rem;
+    color: #64748b;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.djelatnosti li:last-child { border-bottom: none; }
+
+.djelatnosti li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 15px;
+    color: #4ade80;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .o-nama-container { 
+        grid-template-columns: 1fr; 
+        gap: 50px; 
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul { 
+        flex-wrap: wrap; 
+        gap: 10px; 
+    }
+    
+    #hero { 
+        padding: 100px 20px 80px; 
+    }
+    
+    #hero h1 { 
+        font-size: 2.5rem; 
+    }
+    
+    #o-nama-sadrzaj { 
+        padding: 80px 20px; 
+    }
+    
+    .firma-podaci-grid { 
+        grid-template-columns: 1fr; 
+        gap: 25px; 
+    }
+    
+    .firma-kartica, 
+    .vlasnik-kartica { 
+        padding: 40px 30px; 
+    }
+    
+    .vlasnik-kartica { 
+        flex-direction: column; 
+        text-align: center; 
+        gap: 30px; 
+    }
+    
+    .vlasnik-slika { 
+        width: 200px; 
+    }
+    
+    .vlasnik-slika img { 
+        width: 200px; 
+        height: 200px; 
+    }
+}

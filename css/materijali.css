@@ -1,0 +1,483 @@
+/* css/materijali.css - Kompletan CSS za materijali stranice */
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    line-height: 1.6;
+    color: #334155;
+    background: #f8fafc;
+    padding-top: 220px;
+}
+
+/* HEADER - isti kao style.css */
+header {
+    background: #0f172a;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,.15);
+    transition: all 0.3s ease;
+}
+
+header.shrunk { 
+    padding-top: 0 !important;
+    margin-top: -160px;
+}
+
+nav { 
+    padding: 15px 20px; 
+    transition: all 0.3s ease; 
+}
+
+header.shrunk nav { 
+    padding: 10px 20px; 
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #4ade80;
+    background: rgba(74,222,128,.1);
+}
+
+.firma-info {
+    background: rgba(15,23,42,.95);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+header.shrunk .firma-info { 
+    display: none !important; 
+}
+
+.firma-naziv {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.firma-adresa { 
+    color: #cbd5e1; 
+    font-size: 0.85rem; 
+    margin-bottom: 15px; 
+}
+
+.firma-podaci {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.firma-podaci span {
+    color: #f8fafc;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: rgba(255,255,255,.08);
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,.15);
+}
+
+/* HERO */
+#hero {
+    background: linear-gradient(rgba(15,23,42,.85), rgba(15,23,42,.9)), 
+                url("../slike/kamion.jpg") center/cover;
+    color: white;
+    text-align: center;
+    padding: 160px 20px 120px;
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 20px rgba(0,0,0,.5);
+}
+
+#hero p {
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+/* MATERIJALI GRID - VEĆI KVADRATI */
+#cijene-materijala {
+    padding: 120px 20px 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.materijal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 40px;
+    margin-bottom: 100px;
+}
+
+.materijal-kartica {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.12);
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.materijal-kartica:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0,0,0,.18);
+}
+
+.materijal-slika {
+    height: 280px;  /* VEĆA SLIKA */
+    background: #f1f5f9;
+    position: relative;
+}
+
+.materijal-slika img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.materijal-slika .placeholder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #4ade80;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.materijal-info {
+    padding: 30px;
+}
+
+.materijal-info h3 {
+    color: #0f172a;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.cijena {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #22c55e;
+    margin-bottom: 20px;
+}
+
+.specifikacije {
+    font-size: 1rem;
+    color: #64748b;
+}
+
+.specifikacije div {
+    margin-bottom: 10px;
+}
+
+.specifikacije strong {
+    color: #0f172a;
+}
+
+/* PRIJEVOZ - VEĆE KARTICE */
+#prijevoz-cijene {
+    padding: 120px 20px 120px;
+    background: #f8fafc;
+    text-align: center;
+}
+
+#prijevoz-cijene h2 {
+    font-size: 2.8rem;
+    color: #0f172a;
+    margin-bottom: 70px;
+    font-weight: 800;
+}
+
+.cijene-prijevoza {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto 60px;
+}
+
+.prijevoz-kartica {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.12);
+    border-left: 5px solid #4ade80;
+    transition: all 0.3s ease;
+}
+
+.prijevoz-kartica:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0,0,0,.18);
+}
+
+.prijevoz-naslov {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 15px;
+}
+
+.prijevoz-cijena {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #22c55e;
+    margin-bottom: 15px;
+}
+
+.prijevoz-info {
+    color: #64748b;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.napomena {
+    background: #f0fdf4;
+    border-left: 5px solid #22c55e;
+    padding: 25px 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 12px;
+    font-size: 1rem;
+}
+
+.napomena strong {
+    color: #166534;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #4ade80, #22c55e);
+    color: #0f172a;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 16px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 10px 20px rgba(74,222,128,.3);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(74,222,128,.4);
+}
+
+/* DODATNE SEKCIJE */
+
+/* Opis materijala i poslovanja */
+#o-materijalima {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#o-materijalima h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+}
+
+#o-materijalima p {
+    text-align: center;
+    color: #334155;
+    max-width: 800px;
+    margin: 0 auto 1rem;
+    font-size: 1.1rem;
+}
+
+
+
+/* Prednosti */
+#prednosti {
+    padding: 100px 20px;
+    background-color: #f8fafc;
+}
+
+#prednosti h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0f172a;
+    margin-bottom: 2.5rem;
+    font-weight: 800;
+}
+
+.prednosti-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.prednost-kartica {
+    background: white;
+    border-radius: 16px;
+    padding: 28px 24px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.12);
+    border-left: 5px solid #4ade80;
+    transition: all 0.3s ease;
+}
+
+.prednost-kartica:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 22px 45px rgba(0,0,0,.16);
+}
+
+.prednost-kartica h3 {
+    color: #0f172a;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.prednost-kartica p {
+    color: #64748b;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+
+/* Dodatni materijali (npr. cement 42,5 i pijesak) */
+#dodatni-materijali {
+    padding: 100px 20px 120px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+#dodatni-materijali h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0f172a;
+    margin-bottom: 2.5rem;
+    font-weight: 800;
+}
+
+/* Dodatni materijali koriste isti .materijal-grid i .materijal-kartica stilove kao već postojeći */
+
+
+
+
+/* CTA (call to action) */
+#cta {
+    padding: 100px 20px;
+    background: linear-gradient(rgba(15,23,42,.95), rgba(15,23,42,.95)), url("../slike/kamion.jpg") center/cover;
+    color: #fff;
+    text-align: center;
+}
+
+#cta h2 {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 15px rgba(0,0,0,.6);
+}
+
+#cta p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 1.8rem;
+    text-shadow: 0 2px 8px rgba(0,0,0,.4);
+}
+
+#cta .btn {
+    background: linear-gradient(135deg, #4ade80, #22c55e);
+    color: #0f172a;
+    font-size: 1.2rem;
+    padding: 18px 40px;
+    box-shadow: 0 12px 25px rgba(74,222,128,.35);
+}
+
+#cta .btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 35px rgba(74,222,128,.45);
+}
+
+
+
+/* VEĆI GUMB za CTA */
+.btn-large {
+    padding: 18px 40px;
+    font-size: 1.2rem;
+}
+
+
+
+/* RESPONSIVE - dodatni iznad ovoga ti je već bio */
+@media (max-width: 768px) {
+    body { padding-top: 180px; }
+    
+    nav ul { 
+        flex-wrap: wrap; 
+        gap: 10px; 
+    }
+    
+    #hero { 
+        padding: 130px 20px 100px; 
+    }
+    
+    #hero h1 { 
+        font-size: 2.5rem; 
+    }
+    
+    .materijal-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .cijene-prijevoza {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    #cijene-materijala,
+    #prijevoz-cijene {
+        padding: 80px 20px;
+    }
+    
+    #prijevoz-cijene h2 {
+        font-size: 2.2rem;
+    }
+}
