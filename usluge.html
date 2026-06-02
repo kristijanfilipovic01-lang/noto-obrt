@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<!-- Hero sekcija -->
+
 <section id="usluge-hero">
     <h1>Naše usluge</h1>
     <p>
@@ -18,7 +18,6 @@
     </p>
 </section>
 
-<!-- SLIDER 1: Kamioni -->
 <section id="slider">
     <h2>Naša vozila i oprema</h2>
 
@@ -45,7 +44,6 @@
     </p>
 </section>
 
-<!-- SLIDER 2: Distribucija -->
 <section id="slider-distribucija">
     <h2>Distribucija naftnih derivata</h2>
 
@@ -79,7 +77,6 @@
     </ul>
 </section>
 
-<!-- SLIDER 3: Oprema -->
 <section id="slider-oprema">
     <h2>Rad s dizalicom i oprema</h2>
 
@@ -111,7 +108,6 @@
     </ul>
 </section>
 
-<!-- Ostale sekcije -->
 <section class="usluga-detalj1">
     <h2>Prijevoz materijala</h2>
     <p>
@@ -176,13 +172,11 @@ function createSlider(sliderClass, prevClass, nextClass) {
     // Re‑aktualiziraj širinu i poziciju na resizeu
     window.addEventListener("resize", update);
 
-    // NEXT
     nextBtn.addEventListener("click", () => {
         index = (index + 1) % images.length;
         update();
     });
 
-    // PREV
     prevBtn.addEventListener("click", () => {
         index = (index - 1 + images.length) % images.length;
         update();
