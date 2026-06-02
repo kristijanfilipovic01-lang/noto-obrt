@@ -5,7 +5,7 @@ body {
     line-height: 1.6;
     color: #334155;
     background: #f8fafc;
-    padding-top: 200px; /* dovoljno za header + firma-info */
+    padding-top: 200px;
 }
 
 /* HEADER */
@@ -48,7 +48,7 @@ nav ul li a.active {
     background: rgba(74,222,128,.1);
 }
 
-/* FIRMA INFO (ANIMACIJA) */
+/* FIRMA INFO */
 .firma-info {
     background: rgba(15,23,42,.95);
     padding: 20px;
@@ -109,8 +109,6 @@ header.shrunk .firma-info {
     text-align: center;
     padding: 120px 20px 80px;
 }
-
-/* O STATAK OSTAVLJEN ISTI */
 
 #hero h1 {
     font-size: 3.5rem;
