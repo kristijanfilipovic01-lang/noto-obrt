@@ -1,4 +1,4 @@
-/* css/materijali.css - Kompletan CSS za materijali stranice */
+
 
 * { 
     margin: 0; 
@@ -157,7 +157,7 @@ header.shrunk .firma-info {
 }
 
 .materijal-slika {
-    height: 280px;  /* VEĆA SLIKA */
+    height: 280px;
     background: #f1f5f9;
     position: relative;
 }
@@ -381,7 +381,7 @@ header.shrunk .firma-info {
 
 
 
-/* Dodatni materijali (npr. cement 42,5 i pijesak) */
+/* Dodatni materijali */
 #dodatni-materijali {
     padding: 100px 20px 120px;
     max-width: 1400px;
@@ -397,9 +397,6 @@ header.shrunk .firma-info {
 }
 
 /* Dodatni materijali koriste isti .materijal-grid i .materijal-kartica stilove kao već postojeći */
-
-
-
 
 /* CTA (call to action) */
 #cta {
@@ -444,8 +441,6 @@ header.shrunk .firma-info {
 }
 
 
-
-/* RESPONSIVE - dodatni iznad ovoga ti je već bio */
 @media (max-width: 768px) {
     body { padding-top: 180px; }
     
