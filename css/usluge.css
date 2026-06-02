@@ -82,7 +82,7 @@ li::before {
     margin-right: 12px;
 }
 
-/* Poziv na akciju */
+/* Poziv na izvršavanje */
 #cta {
     background-color: #1f2933;
     text-align: center;
@@ -186,7 +186,6 @@ li::before {
     right: 16px;
 }
 
-/* Mobilne verzije */
 @media (max-width: 768px) {
     section {
         padding: 60px 20px;
